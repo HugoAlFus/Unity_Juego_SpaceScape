@@ -14,7 +14,7 @@ public class Control_Gravedad : MonoBehaviour, IHabilidad
     private Control control;
     private bool b_invertir_gravedad = false;
     private float f_ultima_accion = -Mathf.Infinity;
-    private float f_cooldown = 3.5f;
+    private float f_cooldown = 3.3f;
 
     public bool B_invertir_gravedad { get => b_invertir_gravedad; set => b_invertir_gravedad = value; }
 

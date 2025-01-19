@@ -5,7 +5,8 @@ using UnityEngine;
 public class Control_Personaje : MonoBehaviour, IReinicio
 {
     public float f_velocidad_rotacion = 30f;
-    public float f_limite_vertical = -30f;
+    public float f_limite_vertical_inferior = -15f;
+    public float f_limite_vertical_superior = 15f;
 
     private bool b_toca_piso = false;
     private bool b_resetear = false;
@@ -50,6 +51,7 @@ public class Control_Personaje : MonoBehaviour, IReinicio
 
         foreach (IVelocidad_Personaje velocidad_Personaje in velocidades)
         {
+           
             velocidadTotal += velocidad_Personaje.Velocidad(b_toca_piso, rch_piso);
         }
 
@@ -83,9 +85,10 @@ public class Control_Personaje : MonoBehaviour, IReinicio
 
     private void Reaparicion()
     {
-        if (transform.position.y < f_limite_vertical)
+        if (transform.position.y < f_limite_vertical_inferior || transform.position.y > f_limite_vertical_superior)
         {
             Resetear();
+            GetComponentInChildren<IHabilidad>().Reinicio();
         }
     }
 

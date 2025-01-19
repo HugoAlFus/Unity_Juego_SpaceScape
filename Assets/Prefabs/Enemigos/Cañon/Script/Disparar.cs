@@ -17,7 +17,7 @@ public class Disparar : MonoBehaviour
         if(f_tiempo_transcurrido >= f_tiempo_disparo)
         {
             f_tiempo_transcurrido = 0;
-            Debug.Log("Disparo");
+            //Debug.Log("Disparo");
             Disparo();
 
         }

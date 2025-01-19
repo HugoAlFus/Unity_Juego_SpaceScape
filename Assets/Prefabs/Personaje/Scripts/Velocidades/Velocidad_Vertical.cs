@@ -39,6 +39,7 @@ public class Velocidad_Vertical : MonoBehaviour, IVelocidad_Personaje
                 
                 v3_g_vertical = -v3_direccion_abajo * f_impulso_salto;
                 GetComponentInChildren<IAnimacion>().Animar_Salto();
+                Debug.Log(v3_g_vertical);
 
             }
             else
