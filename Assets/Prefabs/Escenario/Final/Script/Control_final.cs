@@ -8,7 +8,7 @@ public class Control_final : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-
+            FindAnyObjectByType<Control>().Apagar_Luces_Intermitentes();
         }
     }
 

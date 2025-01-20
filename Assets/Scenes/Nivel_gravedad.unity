@@ -21583,6 +21583,7 @@ GameObject:
   - component: {fileID: 1969696514}
   - component: {fileID: 1969696513}
   - component: {fileID: 1969696512}
+  - component: {fileID: 1969696515}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -21676,6 +21677,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969696510}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1969696515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969696510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c7916acb8d8d042bb5dc24b357cee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1971299513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1484773449001454, guid: 52885593799113a428a7ed330ad57782, type: 3}
@@ -24797,11 +24810,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5262623950848071026, guid: 12454967e3a36e94c8641193ac1b4697, type: 3}
       propertyPath: m_LocalScale.z
-      value: 166
+      value: 165.17194
       objectReference: {fileID: 0}
     - target: {fileID: 5262623950848071026, guid: 12454967e3a36e94c8641193ac1b4697, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 44.2
+      value: 45.1
       objectReference: {fileID: 0}
     - target: {fileID: 6319261195228391516, guid: 12454967e3a36e94c8641193ac1b4697, type: 3}
       propertyPath: m_LocalPosition.x
