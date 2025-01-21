@@ -95,6 +95,9 @@ public class Control_Panel : MonoBehaviour
 
     }
 
+
+
+
     private void Set_Seleccionado(GameObject go)
     {
         EventSystem.current.SetSelectedGameObject(go);

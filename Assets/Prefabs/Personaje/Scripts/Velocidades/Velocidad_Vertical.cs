@@ -5,6 +5,7 @@ using UnityEngine;
 public class Velocidad_Vertical : MonoBehaviour, IVelocidad_Personaje
 {
     public float f_impulso_salto = 5f;
+    public KeyCode kc_saltar;
 
     private Vector3 v3_g_vertical = Vector3.zero;
     CharacterController cc_personaje;
@@ -33,7 +34,7 @@ public class Velocidad_Vertical : MonoBehaviour, IVelocidad_Personaje
         if (b_toca_piso)
         {
             Vector3 v3_direccion_abajo = transform.TransformDirection(Vector3.down).normalized;
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(kc_saltar))
             {
 
                 
