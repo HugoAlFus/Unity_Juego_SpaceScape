@@ -1,22 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Trampa_pincho : MonoBehaviour {
 
     //This script goes on the SpikeTrap prefab;
 
-    public Animator spikeTrapAnim; //Animator for the SpikeTrap;
+    public Animator spikeTrapAnim;
+    private Control_Enemigo Control_Enemigo;
 
-    // Use this for initialization
     void Awake()
     {
+
+
         //get the Animator component from the trap;
         spikeTrapAnim = GetComponent<Animator>();
         //start opening and closing the trap for demo purposes;
         StartCoroutine(OpenCloseTrap());
     }
 
+    void Update()
+    {
+
+    }
 
     IEnumerator OpenCloseTrap()
     {
