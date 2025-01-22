@@ -9,19 +9,28 @@ public class Disparar : MonoBehaviour
     public float f_tiempo_disparo = 5f;
 
     private float f_tiempo_transcurrido;
-  
+    private Control_Cañon control_cañon;
+
+    private void Start()
+    {
+        control_cañon = GetComponent<Control_Cañon>();
+    }
+
     void Update()
     {
-        f_tiempo_transcurrido += Time.deltaTime;
-
-        if(f_tiempo_transcurrido >= f_tiempo_disparo)
+        if (control_cañon != null && control_cañon.B_esta_dentro)
         {
-            f_tiempo_transcurrido = 0;
-            //Debug.Log("Disparo");
-            Disparo();
+            f_tiempo_transcurrido += Time.deltaTime;
 
+            if (f_tiempo_transcurrido >= f_tiempo_disparo)
+            {
+                f_tiempo_transcurrido = 0;
+                //Debug.Log("Disparo");
+                Disparo();
+
+            }
         }
-        
+
     }
 
     private void Disparo()

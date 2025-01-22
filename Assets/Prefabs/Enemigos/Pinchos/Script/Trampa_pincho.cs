@@ -3,29 +3,20 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Trampa_pincho : MonoBehaviour {
+public class Trampa_pincho : MonoBehaviour
+{
 
     //This script goes on the SpikeTrap prefab;
 
     public Animator spikeTrapAnim;
-    private Control_Enemigo Control_Enemigo;
 
     void Awake()
     {
-
-
-        //get the Animator component from the trap;
         spikeTrapAnim = GetComponent<Animator>();
-        //start opening and closing the trap for demo purposes;
-        StartCoroutine(OpenCloseTrap());
-    }
-
-    void Update()
-    {
 
     }
 
-    IEnumerator OpenCloseTrap()
+    public IEnumerator OpenCloseTrap()
     {
         //play open animation;
         spikeTrapAnim.SetTrigger("open");
@@ -36,7 +27,11 @@ public class Trampa_pincho : MonoBehaviour {
         //wait 2 seconds;
         yield return new WaitForSeconds(2);
         //Do it again;
-        StartCoroutine(OpenCloseTrap());
 
+    }
+
+    public void Cerrar_Trampa()
+    {
+        spikeTrapAnim.SetTrigger("close");
     }
 }

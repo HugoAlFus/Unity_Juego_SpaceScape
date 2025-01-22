@@ -25,7 +25,7 @@ public class Movimiento_puntos : MonoBehaviour
             {
                 v3_objetivo = t_punto_final.transform.position;
 
-                Debug.Log(Quaternion.identity);
+                //Debug.Log(Quaternion.identity);
 
                if (t_a_mover.rotation.y != Quaternion.identity.y)
                     t_a_mover.Rotate(new Vector3(0, 180, 0));
